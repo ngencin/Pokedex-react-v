@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import PageNotFound from './pages/page-not-found';
 import PokemonEdit from './pages/pokemon-edit';
 import PokemonPost from './pages/pokemon-add';
+import Login from './pages/login';
+import PrivateRoute from './PrivateRoute';
 
 
 const App: FunctionComponent = () => {
@@ -21,11 +23,15 @@ const App: FunctionComponent = () => {
       </nav>
       {/*Le système de gestion des routes de notre applicaton*/}
       <Routes>
+       
+        <Route path ="/login" element={<Login />} />
+        <Route element={<PrivateRoute/>} > 
         <Route  path="/" element={<PokemonList />} />
         <Route  path="/pokemons" element={<PokemonList />} />
-               <Route  path="/pokemon/post" element={<PokemonPost />} />
- <Route  path="/pokemon/edit/:id" element={<PokemonEdit />} />
+        <Route  path="/pokemon/post" element={<PokemonPost />} />
+        <Route  path="/pokemon/edit/:id" element={<PokemonEdit />} />
         <Route path="/pokemons/:id" element={<PokemonDetail/>} />
+        </Route>
         <Route element={<PageNotFound />} />
       </Routes>
     </div>
