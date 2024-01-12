@@ -1,0 +1,38 @@
+.header-css{
+    display: flex;
+    width: 100%;
+    padding: 10px 50px 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-css-list{
+    flex-grow: 1;
+    
+    
+}
+
+.header-css-list a{
+    font-family: 'Abril Fatface', serif;
+    color: #F4BC04;
+    font-size: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+   
+}
+
+.header-css-pokedex{
+   flex-grow: 1;
+  text-align: right;
+}
+
+.header-css-pokedex img{
+    width: 200px;
+}
+
+.header-css-pokedex a{
+    font-family: 'Abril Fatface', serif;
+    font-size: 2em;
+}

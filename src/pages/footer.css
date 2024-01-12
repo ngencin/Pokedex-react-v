@@ -1,0 +1,19 @@
+.footer-css{
+    display: flex;
+    justify-content: center;
+    border-top: 0.5px black solid;
+    margin-top: 60px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.footer-css img{
+    width: 150px;
+}
+
+.footer-css p{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 8px;
+
+}

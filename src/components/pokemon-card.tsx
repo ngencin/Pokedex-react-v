@@ -27,14 +27,15 @@ const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = '#009688'
     navigate(`/pokemons/${id}`);
    }
 
+
   return (
-    <div className="col s6 m4" onClick={() => goToPokemon(pokemon.id)} onMouseEnter={showBorder} onMouseLeave={hideBorder}>
-      <div className="card horizontal" style={{ borderColor: color }}>
+    <div className="card-pokemon" onClick={() => goToPokemon(pokemon.id)} onMouseEnter={showBorder} onMouseLeave={hideBorder}>
+      <div className="card-horizontal" style={{ borderColor: color }}>
         <div className="card-image"> 
           <img src={pokemon.picture} alt={pokemon.name}/>
         </div>
         <div className="card-stacked">
-          <div className="card-content">
+          <div className="card-content-pokemon">
             <p>{pokemon.name}</p>
             <p><small>{formatDate(pokemon.created)}</small></p>
             {pokemon.types.map(type => (

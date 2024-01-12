@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthenticationService from '../services/authentication-service';
+import './login.css'
 
 type Field = {
   value?: any,
@@ -79,24 +80,24 @@ const Login: FunctionComponent = () => {
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
-      <div className="row">
-        <div className="col s12 m8 offset-m2">
-          <div className="card hoverable">
+        <div className="log-css">
+          <div className="log-card">
             <div className="card-stacked">
-              <div className="card-content">
+              
                 {/* Form message */}
-                {message && <div className="form-group">
-                  <div className="card-panel grey lighten-5">
+                {message && 
+                  <div className="log-co">
                     {message}
                   </div>
-                </div>}
+                }
                 {/* Field username */}
+                <div className="card-content">
                 <div className="form-group">
                   <label htmlFor="username">Identifiant</label>
                   <input id="username" type="text" name="username" className="form-control" value={form.username.value} onChange={e => handleInputChange(e)}></input>
                   {/* error */}
                   {form.username.error &&
-                  <div className="card-panel red accent-1"> 
+                  <div className="log-error"> 
                    {form.username.error} 
                   </div>} 
                 </div>
@@ -106,19 +107,19 @@ const Login: FunctionComponent = () => {
                   <input id="password" type="password" name="password" className="form-control" value={form.password.value} onChange={e => handleInputChange(e)}></input>
                   {/* error */}
                   {form.password.error &&
-                  <div className="card-panel red accent-1"> 
+                  <div className="log-error"> 
                    {form.password.error} 
                   </div>} 
                 </div>
-              </div>
-              <div className="card-action center">
+              
+              <div className="form-group">
                 {/* Submit button */}
-                <button type="submit" className="btn">Valider</button>
+                <input type="submit" className='log-button' value="Send Request" />
+              </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </form>
   );
 };

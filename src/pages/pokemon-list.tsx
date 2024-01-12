@@ -4,6 +4,7 @@ import PokemonCard from '../components/pokemon-card';
 import PokemonService from '../services/pokemon-service' 
 import { Link } from 'react-router-dom';
 import PokemonSearch from '../components/pokemon-search';
+import './pokemon-list.css'
 
 const PokemonList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -13,12 +14,9 @@ const PokemonList: FunctionComponent = () => {
   }, []);
   
   return (
-    <div>
-   
-      <h1 className="center">Pokédex</h1>
-      <div className="container"> 
-        <div className="row">  
-          <PokemonSearch/>
+    <div className='list-pokemons'>
+       <PokemonSearch/>
+          <div className="list-card">  
         {pokemons.map(pokemon => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
@@ -26,7 +24,6 @@ const PokemonList: FunctionComponent = () => {
         <Link className="btn-floating btn-large waves-effect waves-light red z-depth-3"
          style={{position: 'fixed' , bottom: '25px' , right: '25px'}} to="/pokemon/post"><i className="fa fa-plus"></i></Link>
       </div>
-    </div> 
   );
 }
   

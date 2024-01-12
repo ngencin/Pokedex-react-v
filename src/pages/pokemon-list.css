@@ -1,0 +1,12 @@
+.list-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.list-pokemons{
+    display: flex;
+    flex-direction: column;
+}

@@ -2,6 +2,8 @@ import React, { FunctionComponent, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Pokemon from '../models/pokemon';
 import PokemonService from '../services/pokemon-service';
+import './pokemon-search.css'
+
  
 const PokemonSearch: FunctionComponent = () => {
   
@@ -21,11 +23,9 @@ const PokemonSearch: FunctionComponent = () => {
   }
   
   return (
-    <div className="row"> 
-    <div className="col s12 m6 offset-m3"> 
-      <div className="card"> 
-      <div className="card-content"> 
-        <div className="input-field"> 
+    <div className="search-pokemons"> 
+      <div className="card-content-pokemons"> 
+        <div className="search-text"> 
         <input type="text" placeholder="Rechercher un pokémon" value={term} onChange={e => handleInputChange(e)} /> 
         </div> 
         <div className='collection'>
@@ -37,8 +37,6 @@ const PokemonSearch: FunctionComponent = () => {
         </div> 
       </div> 
       </div> 
-    </div> 
-    </div>
   );
 }
   

@@ -1,0 +1,50 @@
+.card-content-pokemons{
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(2,2,173,0.2707676820728291) 0%, rgba(253,29,29,0.5116640406162465) 50%, rgba(255,233,51,0.2259497549019608) 100%);
+    padding: 15px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+
+.search-pokemons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 85px;
+}
+
+input::placeholder{
+    color:#B3001B;
+}
+
+.collection{
+    border-top: solid 1px #F4BC04;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]){
+  border: none;
+  box-shadow: none;
+
+
+  }
+  input[type=text]:not(.browser-default){
+    border: none;
+    box-shadow: none;
+  }
+
+input[value]{
+    color: #B3001B;
+}
+
+
+.collection a.collection-item {
+    color:#F4BC04;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.collection .collection-item:last-child {
+    border: solid 1px #F4BC04;
+    background-color: #EBEBEB;
+}

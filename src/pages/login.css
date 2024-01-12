@@ -1,0 +1,56 @@
+
+.log-css{
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(2,2,173,0.2707676820728291) 0%, rgba(253,29,29,0.5116640406162465) 50%, rgba(255,233,51,0.2259497549019608) 100%);
+}
+
+.log-card{
+    padding: 50px;
+}
+
+.log-co{
+    background-color: #EBEBEB;
+    color: #B3001B;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: -1px 1px 32px -1px rgba(0,0,0,0.61); 
+    box-shadow: -1px 1px 32px -1px rgba(0,0,0,0.61);
+}
+
+.card-content{
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: -1px 1px 32px -1px rgba(0,0,0,0.61); 
+box-shadow: -1px 1px 32px -1px rgba(0,0,0,0.61);
+}
+
+input[type=submit]{
+    display: flex;
+    background-color: #F4BC04;
+    color: #B3001B;
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+input[type=submit]:hover{
+    background-color: #B3001B;
+    color: #EBEBEB;
+    color:#F4BC04;
+}
+
+.log-error{
+    background-color: #B3001B;
+    margin: 15px;
+    color: #EBEBEB;
+    border-radius: 10px;
+    padding: 5px;
+}
+ 
