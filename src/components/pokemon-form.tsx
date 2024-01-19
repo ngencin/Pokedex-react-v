@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Pokemon from '../models/pokemon';
 import formatType from '../helpers/format-type';
 import PokemonService from '../services/pokemon-service';
+import './pokemon-form.css'
  
 
 type Props = { 
@@ -79,7 +80,7 @@ const validateForm = () => {
     // Validator url
     if(isAddForm()) {
 
-        const start = "https://assets.pokemon.com//cms2/img/pokedex/detail/";
+        const start = " ";
         const end = ".png";
   
         if(!form.picture.value.startsWith(start) || !form.picture.value.endsWith(end)) {
@@ -151,6 +152,7 @@ const validateForm = () => {
     pokemon.types = form.types.value;
     pokemon.picture = form.picture.value;
     isEditForm ? updatePokemon() : addPokemon();
+    navigate ('/')
   }
   }
  
@@ -176,19 +178,18 @@ const validateForm = () => {
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}> 
-      <div className="row">
-        <div className="col s12 m8 offset-m2">
-          <div className="card hoverable"> 
-          {isEditForm && (
+      <div className="content-add">
+       <div className="card-hover"> 
+            <div className="card-stacked">
+              <div className="card-add-content">
+              {isEditForm && (
              <div className="card-image">
              <img src={pokemon.picture} alt={pokemon.name} style={{width: '250px', margin: '0 auto'}}/>
-             <span className="btn-floating halfway-fab waves-effect waves-light">
-               <i onClick={deletePokemon} className="material-icons">delete</i>
+             <span className="button-card">  
+             <i onClick={deletePokemon} className="fa-solid fa-trash"></i>
              </span>
            </div>
             )}
-            <div className="card-stacked">
-              <div className="card-content">
                 {/* Pokemon picture */}
                 {isAddForm() &&(
                      <div className="form-group">
@@ -244,16 +245,16 @@ const validateForm = () => {
                       </label>
                     </div>
                   ))}
-                </div>
-              </div>
-              <div className="card-action center">
+                </div> 
+                <div className="card-action">
                 {/* Submit button */}
-                <button type="submit" className="btn">Valider</button>
+                <button type="submit" className="btn-valid">Valider</button>
               </div>
+              </div>
+             
             </div>
           </div>
         </div>
-      </div>
     </form>
   );
 };

@@ -1,0 +1,49 @@
+.content-add{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card-hover{
+    width: 50%;
+}
+
+.card-hover:hover{
+    -webkit-box-shadow: 2px 2px 18px 5px rgba(0,0,0,0.39); 
+    box-shadow: 2px 2px 18px 5px rgba(0,0,0,0.39);
+    border-radius: 10px;
+}
+.card-add-content{
+    padding: 50px;
+    border-radius: 10px;
+border: double 6px #F4BC04;
+
+}
+
+button.btn-valid{
+    background-color: #F4BC04;
+    color: #B3001B;
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button.btn-valid:hover{
+    background-color: #B3001B;
+    color: #EBEBEB;
+    color:#F4BC04;
+}
+
+.card-action{
+    text-align: center;
+}
+
+.fa-solid{
+    font-size: 25px;
+    color: #202030;
+
+}
+
+.fa-solid:hover{
+    color: #B3001B;
+}

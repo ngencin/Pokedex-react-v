@@ -16,8 +16,8 @@ const PokemonEdit: FunctionComponent = () => {
   return (
     <div>
       { pokemon ? (
-        <div className="row">
-            <h2 className="header center">Éditer { pokemon.name }</h2>
+        <div className="content-header-edit">
+            <h2 className="details-center-header">Éditer { pokemon.name }</h2>
             <PokemonForm pokemon={pokemon} isEditForm={true}></PokemonForm>
         </div>
       ) : (

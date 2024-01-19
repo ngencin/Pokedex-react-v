@@ -5,7 +5,7 @@
       "name": "Salamèche",
       "hp": 28,
       "cp": 6,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
+      "picture": "https://pokeapi.co/api/v2/ability/150/",
       "types": [
         "Feu"
       ]
@@ -123,6 +123,16 @@
         "Normal",
         "Plante",
         "Feu"
+      ]
+    },
+    {
+      "id": 1705073413970,
+      "hp": 100,
+      "cp": 10,
+      "name": "Pikachu",
+      "picture": "https://www.pokepedia.fr/images/thumb/7/76/Pikachu-DEPS.png/800px-Pikachu-DEPS.png",
+      "types": [
+        "Normal"
       ]
     }
   ]

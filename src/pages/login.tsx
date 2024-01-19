@@ -114,7 +114,7 @@ const Login: FunctionComponent = () => {
               
               <div className="form-group">
                 {/* Submit button */}
-                <input type="submit" className='log-button' value="Send Request" />
+                <input type="submit" className='log-button' value="Connexion" />
               </div>
               </div>
             </div>
